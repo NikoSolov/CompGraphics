@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" 
+              width="1200" height="800"  
+              style="background:white">
+<defs>
+</defs>
+
+  <image 
+  href="comic.png" 
+  width="1200" height="800" 
+  />
+
+  <text text-anchor="middle" fill="#334676"
+  x="480" y="120" 
+  font-size="30">
+<tspan x="480" dy="30">Is there </tspan><tspan x="480" dy="30">any good </tspan><tspan x="480" dy="30">photo editing </tspan><tspan x="480" dy="30">tools?</tspan>
+</text>
+  <text text-anchor="middle" fill="#334676"
+  x="1010" y="140" 
+  font-size="30">
+<tspan x="1010" dy="30">Why not </tspan><tspan x="1010" dy="30">try Fofor? </tspan><tspan x="1010" dy="30">That's </tspan><tspan x="1010" dy="30">pretty </tspan><tspan x="1010" dy="30">good! </tspan>
+</text></svg>
