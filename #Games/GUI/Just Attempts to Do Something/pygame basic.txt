@@ -1,0 +1,14 @@
+import pygame
+root=pygame.display.set_mode((640,480))
+clock=pygame.time.Clock()
+game=True
+while game:
+	for event in pygame.event.get():
+		if event.type==pygame.QUIT: game=False
+	keys = pygame.key.get_pressed()
+	if keys[pygame.k_ESCAPE]: game=False
+#
+#       User Space
+#
+	pygame.display.update()
+pygame.quit()

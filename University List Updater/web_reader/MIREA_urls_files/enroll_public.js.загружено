@@ -1,0 +1,158 @@
+$(document).ready(function (e) {
+	$("#place, #eduForm").on("change", function () { getAllRates($("#place").val(), $("#eduForm").val(), $("#eduLevel").val()) });
+	$("#eduLevel").on("change", function () {
+		getAllRates($("#place").val(), $("#eduForm").val(), $("#eduLevel").val());
+		location.hash = "#" + $("#eduLevel").val();
+	});
+	$("#showEntrants").on("click", showEntrants);
+
+	var lh = location.hash;
+	if (lh !== "") {
+		$("#eduLevel").val(location.hash.replace("#", ""));
+	}
+
+	getAllRates($("#place").val(), $("#eduForm").val(), $("#eduLevel").val());
+
+	$("#searchHeader").on("click", function () { $("#searchBody").toggle("blind", {}, 100); });
+	$("#searchBtn").on("click", searchEntrant);
+	$("#searchClearBtn").on("click", function () { $("#searchField").val(""); $("#searchResults").empty(); });
+	$("#searchField").on("keyup", function (e) {
+		if (e.keyCode == 13) searchEntrant(); // enter
+		if (e.keyCode == 27) $("#searchBody").hide("blind", {}, 100); // esc
+	});
+
+	/*$("body").on("click", ".showListingBtn", function() {
+		var url = "http://priem.mirea.ru/rating-2015/names.php?competition=" + $(this).attr("data-competitions");
+		//namesWin = window.open(url, "manes", "'width=400,height=500,resizable=yes'");
+		namesWin = window.open(url, '_blank');
+		namesWin.focus();
+	});*/
+});
+
+function refreshCompetitionsSelect() {
+	$("#process").show();
+	$("#namesBody").empty();
+	$.ajax({
+		url: "getCompetitions_p.php",
+		dataType: "JSON",
+		type: "POST",
+		data: {
+			place: $("#place").val(),
+			form: $("#eduForm").val(),
+			conditions: $("#eduConditions").val(),
+		}
+	}).done(function (data) {
+		if (data.result == "ok") {
+			$("#competitionsList").empty();
+
+			for (var i in data.competitions) {
+				$("#competitionsList").append("<option value='" + data.competitions[i].id + "'>" + data.competitions[i].title + "</option>");
+			}
+			$("#process").hide();
+		} else if (data.result == "empty") {
+			$("#competitionsList").append("<option value='0'>----- нет данных -----</option>");
+			$("#process").hide();
+		}
+	});
+}
+
+function showEntrants() {
+	if ($("#competitionsList").val()) {
+		$("#process").show();
+		$.ajax({
+			url: "getEntrants_p.php",
+			dataType: "JSON",
+			type: "POST",
+			data: {
+				competition: $("#competitionsList").val(),
+			}
+		}).done(function (data) {
+			if (data.result == "ok") {
+				$("#namesBody").empty();
+				$("#nameTmpl").tmpl(data.entrants).appendTo("#namesBody");
+				$("#process").hide();
+			} else if (data.result == "empty") {
+				$("#namesBody").empty().html("<tr><td colspan='6'>Не найдено поступающих</td></tr>");
+				$("#process").hide();
+			}
+		});
+	} else {
+		alert("No competitions selected!");
+	}
+}
+
+function getAllRates(place, form, level) {
+	$.ajax({
+		url: "getAllCompetitionsRates_p.php",
+		dataType: "JSON",
+		type: "GET",
+		data: {
+			place: place,
+			form: form,
+			level: level,
+		}
+	}).done(function (data) {
+		//console.log(data);
+		if (typeof (data.level) != "undefined" && typeof (data.form) != "undefined") {
+			var formTxt;
+			if (data.form == "och") formTxt = "(очная форма обучения)";
+			else if (data.form == "ochzaoch") formTxt = "(очно-заочная форма обучения)";
+			else if (data.form == "zaoch") formTxt = "(заочная форма обучения)";
+			$("#levelTxt").text(data.level + " " + formTxt);
+			if (data.levelCode == "bach" || data.levelCode == "mag") $("#agreementInfo").show();
+			else $("#agreementInfo").hide();
+
+		}
+
+		if (data.result == "ok") {
+			$("#rates").html($("#tableHeaderTmpl").tmpl({ level: data.levelCode }));
+			if ($("#eduLevel").val() == "bach") {
+				$("#ratesBachTmpl").tmpl(data.competitions).appendTo("#ratesTable");
+			} else if ($("#eduLevel").val() == "mag") {
+				$("#ratesMagTmpl").tmpl(data.competitions).appendTo("#ratesTable");
+			} else if ($("#eduLevel").val() == "spo") {
+				$("#ratesSpoTmpl").tmpl(data.competitions).appendTo("#ratesTable");
+			} else {
+				$("#ratesPhdTmpl").tmpl(data.competitions).appendTo("#ratesTable");
+			}
+
+			$("#process").hide();
+		} else if (data.result == "empty") {
+			if ($("#eduLevel").val() == "spo") {
+				$('#levelTxt').append(``);
+			}
+			$("#rates").html('<p class="noCompetitionsFound">Конкурсов, удовлетворяющих запросу, не найдено.');
+			$("#process").hide();
+		} else if (data.result == "closed") {
+			$("#rates").html('');
+			$("#process").hide();
+		}
+	});
+}
+function searchEntrant() {
+	if ($("#searchField").val() == "") {
+		$("#searchResults").empty();
+	} else if ($("#searchField").val().length < 3) {
+		$("#searchResults").empty().html("<p align='center'>Введите более точный поисковый запрос.</p>");
+	} else {
+		$("#searchResults").empty().html("<p align='center'><img src='loading.gif'></p>");
+		$.ajax({
+			url: "searchEntrants_p.php",
+			dataType: "JSON",
+			type: "POST",
+			data: {
+				fio: $("#searchField").val()
+			}
+		}).done(function (data) {
+			if (data.result == "ok") {
+				$("#searchResults").empty();
+				$("#searchTmpl").tmpl(data.searchResults).appendTo("#searchResults");
+				if (data.fullCount > data.searchResults.length) {
+					$("#searchResults").append('<div class="entrantFound"><div class="moreResultsAlert">Найдено большое число результатов, и не все они отражены в списке. Пожалуйста, уточните поисковый запрос.</div>');
+				}
+			} else if (data.result == "empty") {
+				$("#searchResults").empty().html('<p class="noCompetitionsFound">Поиск не дал результатов</p>');
+			}
+		});
+	}
+}
