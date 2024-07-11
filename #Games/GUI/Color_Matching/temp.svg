@@ -1,0 +1,469 @@
+<svg width="145" height="145" viewBox="0 0 145 145" xmlns="http://www.w3.org/2000/svg">
+  <!-- Отдельные фигуры -->
+
+
+  <symbol id="blue-trapezoid" viewBox="0 0 1 1">
+    <path d="M0,0H1L.5,.5H0" fill="#008"/>
+  </symbol>
+
+  <symbol id="green-parallelogram" viewBox="0 0 1 1">
+    <path d="M0,0L.5,.5V1L0,.5" fill="#080"/>
+  </symbol>
+
+  <symbol id="green-rectangle" viewBox="0 0 1 1">
+    <path d="M0,0 H1 V.5 H0" fill="#080"/>  
+  </symbol>
+
+  <symbol id="lightGreen-square-triangle" viewBox="0 0 1 1">
+    <polygon points="0,0 0,1 1,1 1,0 .5,.5" fill="#8f0" />
+  </symbol>
+
+  <symbol id="orange-triangle" viewBox="0 0 1 1">
+    <path d="M0,0V1H1" fill="#f80" />
+  </symbol>
+
+  <symbol id="purple-rectangle-circle-in" viewBox="0 0 1 1">
+    <path d="M 0,0h1v.5h-0.25a.25 .25 0 0 0 -0.5 0h-0.25" fill="#808"/>
+  </symbol>
+
+  <symbol id="purple-rectangle-circle-out" viewBox="0 0 1 1">
+    <path d="M 0,0h1v.5h-0.25a.25 .25 0 0 1 -0.5 0h-0.25" fill="#808"/>
+  </symbol>
+
+  <symbol id="red-romb" viewBox="0 0 1 1">
+    <path d="M0,.5 L.5,1 L1,.5 L.5,0" fill="#f00"/>
+  </symbol>
+
+  <symbol id="white-triangle" viewBox="0 0 1 1">
+    <path d="M0,0V1H1" fill="#fff" />
+  </symbol>
+
+  <symbol id="yellow-small-square" viewBox="0 0 1 1">
+    <path d="M0,0 H.5 V.5 H0 " fill="#ff0" />
+  </symbol>
+
+  <symbol id="lightGreen-triangle" viewBox="0 0 1 1">
+    <!-- 0.068, 0.933 = 0.5-+(sqrt(3)/4);  -->
+    <path d="M.5,0 L.068,.75 L0.933,.75" fill="#8f0"/>
+  </symbol>
+
+  <symbol id="lightBlue-hedgehog-in" viewBox="0 0 1 1">
+    <path d="M0,0 H1V.5H.788L.933,.25H.644L.5,0L.355,.25H.066L.211,.5H0" fill="#0ff"/>
+  </symbol>
+
+  <symbol id="lightBlue-hedgehog-out" viewBox="0 0 1 1">
+    <path d="M.5,0L.644,.25H.933L.788,.5L.933,.75H.066L.211,.5L.066,.25H.355" fill="#0ff"/>
+  </symbol>
+
+  <symbol id="red-circle" viewBox="0 0 1 1">
+    <path d="M 0.5 0.5h .25a .25 .25 0 1 1 -.25 -.25" fill="#f00"/>
+  </symbol>
+
+  <symbol id="white-ring" viewBox="0 0 1 1">
+    <path d="M0,0H1V.5A.5 .5 0 0 1 0 .5zM.5 .25A.25 0.25 0 0 0 0.5 0.75A.25 .25 0 0 0 .5 .25" fill="#fff"/>
+  </symbol>
+
+  <symbol id="orange-square" viewBox="0 0 1 1">
+    <path d="M0.2 0.2 h.6v.6h-.6z" fill="#f80"/>
+  </symbol>
+
+  <symbol id="blue-semicircle" viewBox="0 0 1 1">
+    <path d="M0.5 0A 0.5 0.5 0 0 0 0.5 1h 0.1v -1 z" fill="#008"/>
+  </symbol>
+
+  <symbol id="yellow-lines" viewBox="0 0 1 1">
+    <path d="M0 0h.15v1H0zM.5 0h.1v1H.5z" fill="#ff0"/>
+  </symbol>
+
+
+  <!-- сборные -->
+  <symbol id="1" viewBox="0 0 1 1">
+    <use href="#red-romb"/>
+    <use href="#orange-square"  />
+  </symbol>  
+
+  <symbol id="2" viewBox="0 0 1 1">
+    <use href="#blue-semicircle" transform="rotate(270, .5, .5)" />
+    <use href="#lightBlue-hedgehog-out"/>
+  </symbol>  
+
+  <symbol id="3" viewBox="0 0 1 1">
+    <use href="#yellow-small-square"  />
+    <use href="#red-circle"  transform="rotate(270, .5, .5)"/>
+  </symbol>
+
+  <symbol id="4" viewBox="0 0 1 1">
+    <use href="#green-rectangle" transform="rotate(180,.5,.5)"  />
+    <use href="#yellow-lines"  transform="rotate(180, .5, .5)"/>
+  </symbol>
+
+  <symbol id="5" viewBox="0 0 1 1">
+    <use href="#red-romb"  />
+    <use href="#lightGreen-square-triangle"  transform="rotate(90, .5, .5)"/>
+  </symbol>
+
+  <symbol id="6" viewBox="0 0 1 1">
+    <use href="#red-circle"/>
+    <use href="#blue-semicircle" transform="rotate(90,.5,.5)"/>
+  </symbol>
+
+  <symbol id="7" viewBox="0 0 1 1">
+    <use href="#green-parallelogram"  transform="rotate(90, .5, .5)"/>
+    <use href="#blue-trapezoid"  transform="rotate(180, .5, .5)"/>
+  </symbol>
+
+  <symbol id="8" viewBox="0 0 1 1">
+    <use href="#lightBlue-hedgehog-in"/>
+    <use href="#purple-rectangle-circle-out"  transform="rotate(180, .5, .5)"/>
+  </symbol>
+
+  <symbol id="9" viewBox="0 0 1 1">
+    <use href="#orange-triangle"  transform="rotate(270, .5, .5)"/>
+    <use href="#purple-rectangle-circle-in"/>
+  </symbol>
+
+  <symbol id="10" viewBox="0 0 1 1">
+    <use href="#lightGreen-square-triangle"/>
+    <use href="#orange-square"/>
+  </symbol>
+
+  <symbol id="11" viewBox="0 0 1 1">
+    <use href="#yellow-lines"/>
+    <use href="#blue-semicircle" transform="rotate(180,.5,.5)"/>
+  </symbol>
+
+  <symbol id="12" viewBox="0 0 1 1">
+    <use href="#lightGreen-square-triangle"  transform="rotate(90, .5, .5)"/>
+    <use href="#green-parallelogram"/>
+  </symbol>
+
+  <symbol id="13" viewBox="0 0 1 1">
+    <use href="#orange-triangle"  transform="rotate(90, .5, .5)"/>
+    <use href="#blue-trapezoid"  transform="rotate(90, .5, .5)"/>
+  </symbol>
+
+  <symbol id="14" viewBox="0 0 1 1">
+    <use href="#green-rectangle"/>
+    <use href="#yellow-small-square"/>
+  </symbol>
+
+  <symbol id="15" viewBox="0 0 1 1">
+    <use href="#lightGreen-triangle"  transform="rotate(180, .5, .5)"/>
+    <use href="#orange-triangle"/>
+  </symbol>
+  
+  <symbol id="16" viewBox="0 0 1 1">
+    <use href="#red-romb"/>
+    <use href="#green-parallelogram"  transform="rotate(180, .5, .5)"/>
+  </symbol>
+
+  <symbol id="17" viewBox="0 0 1 1">
+    <use href="#lightBlue-hedgehog-out"  transform="rotate(180, .5, .5)"/>
+    <use href="#lightGreen-triangle"/>
+  </symbol>
+
+  <symbol id="18" viewBox="0 0 1 1">
+    <use href="#blue-semicircle"  transform="rotate(90, .5, .5)"/>
+    <use href="#green-rectangle"/>
+  </symbol>
+
+  <symbol id="19" viewBox="0 0 1 1">
+    <use href="#lightBlue-hedgehog-in"  transform="rotate(270, .5, .5)"/>
+    <use href="#blue-trapezoid"  transform="rotate(270, .5, .5)"/>
+  </symbol>
+
+  <symbol id="20" viewBox="0 0 1 1">
+    <use href="#lightBlue-hedgehog-out"/>
+    <use href="#orange-square"/>
+    <use href="#lightGreen-triangle"/>
+  </symbol>
+
+  <symbol id="21" viewBox="0 0 1 1">
+    <use href="#lightBlue-hedgehog-in"/>
+    <use href="#purple-rectangle-circle-in"  transform="rotate(180, .5, .5)"/>
+    <use href="#red-circle"  transform="rotate(270, .5, .5)"/>
+  </symbol>
+
+  <symbol id="22" viewBox="0 0 1 1">
+    <use href="#blue-semicircle" transform="rotate(270, .5, .5)"/>
+    <use href="#orange-square"/>
+    <use href="#yellow-lines" transform="rotate(90, .5, .5)"/>
+  </symbol>
+
+  <symbol id="23" viewBox="0 0 1 1">
+    <use href="#green-rectangle"  transform="rotate(270, .5, .5)"/>
+    <use href="#yellow-small-square"  transform="rotate(90, .5, .5)"/>
+    <use href="#red-romb" />
+  </symbol>
+
+  <symbol id="24" viewBox="0 0 1 1">
+    <use href="#purple-rectangle-circle-in"  transform="rotate(180, .5, .5)"/>
+    <use href="#orange-triangle"  transform="rotate(180, .5, .5)"/>
+    <use href="#red-circle"  transform="rotate(180, .5, .5)"/>
+  </symbol>  
+  
+  <symbol id="25" viewBox="0 0 1 1">
+    <use href="#orange-square"/>
+    <use href="#blue-trapezoid"  transform="rotate(90, .5, .5)"/>
+    <use href="#green-parallelogram"  transform="rotate(270, .5, .5)"/>
+  </symbol>
+
+  <symbol id="26" viewBox="0 0 1 1">
+    <use href="#purple-rectangle-circle-in"  transform="rotate(180, .5, .5)"/>
+    <use href="#purple-rectangle-circle-out"/>
+  </symbol>
+
+  <symbol id="27" viewBox="0 0 1 1">
+    <use href="#lightBlue-hedgehog-out"  transform="rotate(180, .5, .5)"/>
+    <use href="#white-ring"/>
+  </symbol>
+
+  <symbol id="28" viewBox="0 0 1 1">
+    <use href="#blue-semicircle"  transform="rotate(90, .5, .5)"/>
+    <use href="#blue-trapezoid" transform="rotate(90, .5, .5)"/>
+  </symbol>
+
+  <symbol id="29" viewBox="0 0 1 1">
+    <use href="#red-romb"/>
+    <use href="#orange-square"/>
+    <use href="#lightGreen-square-triangle"/>
+  </symbol>
+  
+  <symbol id="30" viewBox="0 0 1 1">
+    <use href="#blue-trapezoid"  transform="rotate(270, .5, .5)"/>
+    <use href="#orange-triangle"  transform="rotate(180, .5, .5)"/>
+    <use href="#yellow-small-square"  transform="rotate(180, .5, .5)"/>
+  </symbol>
+
+  <symbol id="31" viewBox="0 0 1 1">
+    <use href="#yellow-small-square"  transform="rotate(90, .5, .5)"/>
+    <use href="#green-rectangle"  transform="rotate(180, .5, .5)"/>
+    <use href="#white-triangle"  transform="rotate(90, .5, .5)"/>
+  </symbol>
+  <symbol id="32" viewBox="0 0 1 1">
+    <use href="#lightGreen-triangle"/>
+    <use href="#blue-semicircle"  transform="rotate(90, .5, .5)"/>
+    <use href="#red-circle"  transform="rotate(180, .5, .5)"/>
+  </symbol>
+  <symbol id="33" viewBox="0 0 1 1">
+    <use href="#blue-semicircle"  transform="rotate(0, .5, .5)"/>
+    <use href="#yellow-lines" transform="rotate(180,.5,.5)"/>
+    <use href="#lightBlue-hedgehog-in"  transform="rotate(270, .5, .5)"/>
+  </symbol>
+
+  <symbol id="34" viewBox="0 0 1 1">
+    <use href="#lightGreen-square-triangle"  transform="rotate(90, .5, .5)"/>
+    <use href="#white-triangle" transform="rotate(0, .5, .5)"/>
+  </symbol>
+
+  <symbol id="35" viewBox="0 0 1 1">
+    <use href="#orange-square"  transform="rotate(90, .5, .5)"/>
+    <use href="#red-circle" transform="rotate(270, .5, .5)"/>
+    <use href="#orange-triangle" transform="rotate(90, .5, .5)"/>
+  </symbol>
+
+  <symbol id="36" viewBox="0 0 1 1">
+    <use href="#yellow-small-square"  transform="rotate(90, .5, .5)"/>
+    <use href="#purple-rectangle-circle-in" transform="rotate(90, .5, .5)"/>
+    <use href="#yellow-lines" transform="rotate(180, .5, .5)"/>
+  </symbol>
+
+  <symbol id="37" viewBox="0 0 1 1">
+    <use href="#lightBlue-hedgehog-out"  transform="rotate(180, .5, .5)"/>
+    <use href="#green-rectangle"/>
+    <use href="#lightBlue-hedgehog-in"/>
+  </symbol>
+  
+  <symbol id="38" viewBox="0 0 1 1">
+    <use href="#red-romb"/>
+    <use href="#white-triangle"/>
+    <use href="#yellow-lines"/>
+  </symbol>
+  
+  <symbol id="39" viewBox="0 0 1 1">
+    <use href="#green-rectangle" transform="rotate(180, .5, .5)"/>
+    <use href="#lightGreen-square-triangle" transform="rotate(90, .5, .5)"/>
+    <use href="#green-parallelogram" transform="rotate(270, .5, .5)"/>
+  </symbol>
+
+  <symbol id="40" viewBox="0 0 1 1">
+    <use href="#blue-trapezoid"  transform="rotate(270, .5, .5)"/>
+    <use href="#lightBlue-hedgehog-out"  transform="rotate(180, .5, .5)"/>
+    <use href="#lightBlue-hedgehog-in"  transform="rotate(270, .5, .5)"/>
+  </symbol>
+
+  <symbol id="41" viewBox="0 0 1 1">
+    <use href="#red-romb"  transform="rotate(270, .5, .5)"/>
+    <use href="#blue-trapezoid"  transform="rotate(180, .5, .5)"/>
+    <use href="#red-circle"/>
+  </symbol>
+
+  <symbol id="42" viewBox="0 0 1 1">
+    <use href="#purple-rectangle-circle-out"  transform="rotate(90, .5, .5)"/>
+    <use href="#lightGreen-square-triangle"  transform="rotate(90, .5, .5)"/>
+    <use href="#purple-rectangle-circle-in"  transform="rotate(180, .5, .5)"/>
+  </symbol>
+
+  <symbol id="43" viewBox="0 0 1 1">
+    <use href="#lightBlue-hedgehog-out"  transform="rotate(180, .5, .5)"/>
+    <use href="#orange-triangle"  transform="rotate(180, .5, .5)"/>
+    <use href="#lightBlue-hedgehog-in"/>
+  </symbol>
+
+  <symbol id="44" viewBox="0 0 1 1">
+    <use href="#red-romb"/>
+    <use href="#green-parallelogram"  transform="rotate(90, .5, .5)"/>
+    <use href="#white-triangle"  transform="rotate(270, .5, .5)"/>
+  </symbol>
+
+  <symbol id="45" viewBox="0 0 1 1">
+    <use href="#purple-rectangle-circle-out"/>
+    <use href="#white-triangle"  transform="rotate(180, .5, .5)"/>
+    <use href="#purple-rectangle-circle-in" transform="rotate(90, .5, .5)"/>
+  </symbol>
+  
+  <symbol id="46" viewBox="0 0 1 1">
+
+    <use href="#yellow-lines" transform="rotate(180, .5, .5)"/>
+    <use href="#purple-rectangle-circle-in" transform="rotate(90, .5, .5)"/>
+    <use href="#white-ring"/>
+  </symbol>
+
+  <symbol id="47" viewBox="0 0 1 1">
+    <use href="#lightGreen-square-triangle"  transform="rotate(180, .5, .5)"/>
+    <use href="#lightBlue-hedgehog-in"/>
+    <use href="#lightGreen-triangle"  transform="rotate(180, .5, .5)"/>
+  </symbol>
+
+  <symbol id="48" viewBox="0 0 1 1">
+    <use href="#blue-semicircle"  transform="rotate(90, .5, .5)"/>
+    <use href="#white-triangle" transform="rotate(180, .5, .5)"/>
+    <use href="#blue-trapezoid"  transform="rotate(180, .5, .5)"/>
+  </symbol>
+
+  <symbol id="49" viewBox="0 0 1 1">
+    <use href="#green-rectangle"  transform="rotate(90, .5, .5)"/>
+    <use href="#lightBlue-hedgehog-out" transform="rotate(180, .5, .5)"/>
+    <use href="#green-parallelogram"  transform="rotate(180, .5, .5)"/>
+  </symbol>
+
+  <symbol id="50" viewBox="0 0 1 1">
+    <use href="#purple-rectangle-circle-out"  transform="rotate(90, .5, .5)"/>
+    <use href="#blue-semicircle"/>
+    <use href="#purple-rectangle-circle-in"  transform="rotate(180, .5, .5)"/>
+  </symbol>
+
+
+
+
+  <use href="#1" x="0" y="0" width="10"/>
+  <use href="#2" x="15" y="0" width="10"/>
+  <use href="#3" x="30" y="0" width="10"/>
+  <use href="#4" x="45" y="0" width="10"/>
+  <use href="#5" x="60" y="0" width="10"/>
+  <use href="#6" x="75" y="0" width="10"/>
+  <use href="#7" x="90" y="0" width="10"/>
+  <use href="#8" x="105" y="0" width="10"/>
+  <use href="#9" x="120" y="0" width="10"/>
+  <use href="#10" x="135" y="0" width="10"/>
+
+  <use href="#11" x="0" y="15" width="10"/>
+  <use href="#12" x="15" y="15" width="10"/>
+  <use href="#13" x="30" y="15" width="10"/>
+  <use href="#14" x="45" y="15" width="10"/>
+  <use href="#15" x="60" y="15" width="10"/>
+  <use href="#16" x="75" y="15" width="10"/>
+  <use href="#17" x="90" y="15" width="10"/>
+  <use href="#18" x="105" y="15" width="10"/>
+  <use href="#19" x="120" y="15" width="10"/>
+  <use href="#20" x="135" y="15" width="10"/>
+
+  <use href="#21" x="0" y="30" width="10"/>
+  <use href="#22" x="15" y="30" width="10"/>
+  <use href="#23" x="30" y="30" width="10"/>
+  <use href="#24" x="45" y="30" width="10"/>
+  <use href="#25" x="60" y="30" width="10"/>
+  <use href="#26" x="75" y="30" width="10"/>
+  <use href="#27" x="90" y="30" width="10"/>
+  <use href="#28" x="105" y="30" width="10"/>
+  <use href="#29" x="120" y="30" width="10"/>
+  <use href="#30" x="135" y="30" width="10"/>
+
+  <use href="#31" x="0" y="45" width="10"/>
+  <use href="#32" x="15" y="45" width="10"/>
+  <use href="#33" x="30" y="45" width="10"/>
+  <use href="#34" x="45" y="45" width="10"/>
+  <use href="#35" x="60" y="45" width="10"/>
+  <use href="#36" x="75" y="45" width="10"/>
+  <use href="#37" x="90" y="45" width="10"/>
+  <use href="#38" x="105" y="45" width="10"/>
+  <use href="#39" x="120" y="45" width="10"/>
+  <use href="#40" x="135" y="45" width="10"/>
+
+  <use href="#41" x="0" y="60" width="10"/>
+  <use href="#42" x="15" y="60" width="10"/>
+  <use href="#43" x="30" y="60" width="10"/>
+  <use href="#44" x="45" y="60" width="10"/>
+  <use href="#45" x="60" y="60" width="10"/>
+  <use href="#46" x="75" y="60" width="10"/>
+  <use href="#47" x="90" y="60" width="10"/>
+  <use href="#48" x="105" y="60" width="10"/>
+  <use href="#49" x="120" y="60" width="10"/>
+  <use href="#50" x="135" y="60" width="10"/>
+
+  <use href="#51" x="0" y="0" width="10"/>
+  <use href="#52" x="15" y="0" width="10"/>
+  <use href="#53" x="30" y="0" width="10"/>
+  <use href="#54" x="45" y="0" width="10"/>
+  <use href="#55" x="60" y="0" width="10"/>
+  <use href="#56" x="75" y="0" width="10"/>
+  <use href="#57" x="90" y="0" width="10"/>
+  <use href="#58" x="105" y="0" width="10"/>
+  <use href="#59" x="120" y="0" width="10"/>
+  <use href="#60" x="135" y="0" width="10"/>
+
+  <use href="#61" x="0" y="15" width="10"/>
+  <use href="#62" x="15" y="15" width="10"/>
+  <use href="#63" x="30" y="15" width="10"/>
+  <use href="#64" x="45" y="15" width="10"/>
+  <use href="#65" x="60" y="15" width="10"/>
+  <use href="#66" x="75" y="15" width="10"/>
+  <use href="#67" x="90" y="15" width="10"/>
+  <use href="#68" x="105" y="15" width="10"/>
+  <use href="#69" x="120" y="15" width="10"/>
+  <use href="#60" x="135" y="15" width="10"/>
+
+  <use href="#71" x="0" y="30" width="10"/>
+  <use href="#72" x="15" y="30" width="10"/>
+  <use href="#73" x="30" y="30" width="10"/>
+  <use href="#74" x="45" y="30" width="10"/>
+  <use href="#75" x="60" y="30" width="10"/>
+  <use href="#76" x="75" y="30" width="10"/>
+  <use href="#77" x="90" y="30" width="10"/>
+  <use href="#78" x="105" y="30" width="10"/>
+  <use href="#79" x="120" y="30" width="10"/>
+  <use href="#80" x="135" y="30" width="10"/>
+
+  <use href="#81" x="0" y="45" width="10"/>
+  <use href="#82" x="15" y="45" width="10"/>
+  <use href="#83" x="30" y="45" width="10"/>
+  <use href="#84" x="45" y="45" width="10"/>
+  <use href="#85" x="60" y="45" width="10"/>
+  <use href="#86" x="75" y="45" width="10"/>
+  <use href="#87" x="90" y="45" width="10"/>
+  <use href="#88" x="105" y="45" width="10"/>
+  <use href="#89" x="120" y="45" width="10"/>
+  <use href="#90" x="135" y="45" width="10"/>
+
+  <use href="#91" x="0" y="60" width="10"/>
+  <use href="#92" x="15" y="60" width="10"/>
+  <use href="#93" x="30" y="60" width="10"/>
+  <use href="#94" x="45" y="60" width="10"/>
+  <use href="#95" x="60" y="60" width="10"/>
+  <use href="#96" x="75" y="60" width="10"/>
+  <use href="#97" x="90" y="60" width="10"/>
+  <use href="#98" x="105" y="60" width="10"/>
+  <use href="#99" x="120" y="60" width="10"/>
+  <use href="#100" x="135" y="60" width="10"/>
+
+</svg>
